@@ -1,12 +1,14 @@
 # 🏦 Simulasi Sistem Bank & ATM PBO
 
+> **Identitas Mahasiswa**
+> - **Nama:** Wildan Afandika
+> - **NIM:** F1D02510141
+
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
 ![OOP](https://img.shields.io/badge/OOP-Principles-brightgreen?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-Selamat datang di repositori proyek **Simulasi Sistem Bank & Mesin ATM Sederhana**. Proyek ini dikembangkan menggunakan bahasa pemrograman Java untuk mendemonstrasikan implementasi nyata dari konsep dasar **Pemrograman Berorientasi Objek (PBO)**, seperti Enkapsulasi, Instansiasi Objek, dan Relasi Antar-Kelas.
-
-Proyek ini disusun sebagai bentuk pemenuhan Tugas Praktikum / Mata Kuliah Pemrograman Berorientasi Objek.
+Selamat datang di repositori proyek **Simulasi Sistem Bank & Mesin ATM Sederhana**. Proyek ini disusun sebagai bentuk pemenuhan Tugas Pemrograman Berorientasi Objek (PBO), dengan fokus utama pada **Latihan/Eksplorasi materi Array dan ArrayList** di dalam ekosistem Java. Melalui program ini, kita dapat melihat implementasi nyata bagaimana sebuah koleksi data *(Array/ArrayList)* digunakan untuk mengelola entitas secara dinamis.
 
 ---
 
@@ -20,7 +22,7 @@ Proyek ini disusun sebagai bentuk pemenuhan Tugas Praktikum / Mata Kuliah Pemrog
 ---
 
 ## ✨ Fitur Utama
-1. **Registrasi Nasabah**: Bank mampu menampung hingga 100 nasabah yang didaftarkan ke dalam memori.
+1. **Registrasi Nasabah**: Bank mampu menampung hingga 100 nasabah yang didaftarkan ke dalam memori menggunakan struktur data _Array_.
 2. **Manajemen Akun Ganda**: Setiap nasabah diberikan fleksibilitas untuk memiliki maksimal 5 akun / rekening yang berbeda.
 3. **Validasi Saldo Pintar**: Sistem menolak penarikan tunai apabila saldo tidak mencukupi, serta menolak angka minus (kurang dari nol) untuk keamanan transaksi.
 4. **UI ATM Interaktif**: Program utama menyajikan menu terminal (CLI) interaktif yang meniru antarmuka mesin ATM asli, lengkap dengan pembersihan layar (*clear screen*) otomatis.
@@ -40,11 +42,11 @@ Bertugas sebagai representasi *rekening bank*.
 ### 2. `Nasabah.java`
 Merepresentasikan entitas pelanggan (nasabah) di dunia nyata.
 - Menyimpan informasi detail pelanggan seperti `namaDepan` dan `namaBelakang`.
-- Memiliki *Array of Objects* `daftarAkun` yang berperan memberi kapasitas kepemilikan rekening hingga maksimal 5 akun per orang.
+- Mengeksplorasi penggunaan materi *Array of Objects* lewat variabel `daftarAkun` yang berperan membatasi kapasitas kepemilikan rekening hingga maksimal 5 akun per orang.
 
 ### 3. `Bank.java`
 Berperan sebagai pengelola data bank terpusat.
-- Menggunakan *Array of Objects* untuk menampung pendaftaran hingga 100 objek nasabah.
+- Menggunakan pendekatan *Array of Objects* untuk menampung dan meregistrasi kapasitas objek nasabah.
 - Menjadi titik jembatan untuk mencari dan memanggil profil data seorang nasabah menggunakan *index*.
 
 ### 4. `Main.java`
@@ -78,8 +80,6 @@ Proyek ini menggunakan _library_ utilitas bawaan standar dari Java, yaitu:
 ---
 
 ## 📸 Screenshot Eksekusi
-
-Berikut adalah cuplikan hasil berjalannya aplikasi di dalam konsol/terminal, menampilkan keberhasilan logika PBO dan validasi transaksi pada menu ATM:
 
 - **Tampilan Awal:**  
   ![Tampilan Awal](assets/menu_awal.png)
