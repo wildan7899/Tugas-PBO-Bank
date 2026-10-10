@@ -1,25 +1,94 @@
-# Tugas PBO - Sistem Bank & ATM Sederhana
+# 🏦 Simulasi Sistem Bank & ATM PBO
 
-Repositori ini memuat source code program Java yang mensimulasikan sistem perbankan dasar dan ATM sederhana, dibuat sebagai pemenuhan Tugas Pemrograman Berorientasi Objek (PBO).
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![OOP](https://img.shields.io/badge/OOP-Principles-brightgreen?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-## Deskripsi Kode
-Program ini dibangun menggunakan konsep enkapsulasi dan perancangan kelas berbasis PBO. Terdapat 4 kelas utama penyusun sistem:
-- **`Akun.java`**: Mengelola informasi saldo akun, serta menyediakan logika/metode untuk penyetoran (`setor`) dan penarikan (`tarik`) tunai dengan validasi pengembalian tipe data boolean.
-- **`Nasabah.java`**: Merepresentasikan profil pelanggan (nama depan dan belakang). Setiap nasabah dikonfigurasi untuk dapat memiliki maksimal hingga 5 akun menggunakan tipe data *array*.
-- **`Bank.java`**: Bertindak sebagai sentral pengelolaan dengan kapasitas menampung memori hingga 100 *array* nasabah. Terdapat fungsi untuk mendaftarkan dan memanggil nasabah.
-- **`Main.java`**: Kelas utama (entry-point) yang menghubungkan seluruh objek. Kelas ini mendaftarkan nasabah atas nama "Wildan Afandika", mengalokasikan akun baru, dan menjalankan simulasi **Menu ATM Interaktif**.
+Selamat datang di repositori proyek **Simulasi Sistem Bank & Mesin ATM Sederhana**. Proyek ini dikembangkan menggunakan bahasa pemrograman Java untuk mendemonstrasikan implementasi nyata dari konsep dasar **Pemrograman Berorientasi Objek (PBO)**, seperti Enkapsulasi, Instansiasi Objek, dan Relasi Antar-Kelas.
 
-### Penggunaan Library Tambahan
-Program ini mengeksplorasi penggunaan library tambahan bawaan Java yaitu `java.util.Scanner` di dalam kelas `Main.java`. 
-Library ini difungsikan untuk menangkap _input_ dari *user* melalui terminal/konsol, memungkinkan pengguna untuk berinteraksi langsung dengan Menu ATM (memasukkan nomor pilihan menu, menginput nominal tarik tunai, dan setor tunai) sehingga aplikasi berjalan dinamis melalui kontrol blok `do-while` dan `switch-case`.
+Proyek ini disusun sebagai bentuk pemenuhan Tugas Praktikum / Mata Kuliah Pemrograman Berorientasi Objek.
 
-## Screenshot Hasil Eksekusi
+---
 
-*(Silakan unggah dan pasang gambar screenshot eksekusi program Anda di bawah ini)*
-<!-- Format untuk meletakkan gambar: ![Keterangan Gambar](url_atau_path_gambar) -->
-- **Tampilan Awal & Cek Saldo:**
+## 📑 Daftar Isi
+- [Fitur Utama](#-fitur-utama)
+- [Struktur Proyek & Penjelasan Kelas](#-struktur-proyek--penjelasan-kelas)
+- [Library Tambahan](#-library-tambahan)
+- [Cara Menjalankan](#-cara-menjalankan)
+- [Screenshot Eksekusi](#-screenshot-eksekusi)
 
-- **Uji Coba Setor Tunai:**
+---
 
-- **Uji Coba Tarik Tunai:**
+## ✨ Fitur Utama
+1. **Registrasi Nasabah**: Bank mampu menampung hingga 100 nasabah yang didaftarkan ke dalam memori.
+2. **Manajemen Akun Ganda**: Setiap nasabah diberikan fleksibilitas untuk memiliki maksimal 5 akun / rekening yang berbeda.
+3. **Validasi Saldo Pintar**: Sistem menolak penarikan tunai apabila saldo tidak mencukupi, serta menolak angka minus (kurang dari nol) untuk keamanan transaksi.
+4. **UI ATM Interaktif**: Program utama menyajikan menu terminal (CLI) interaktif yang meniru antarmuka mesin ATM asli, lengkap dengan pembersihan layar (*clear screen*) otomatis.
 
+---
+
+## 🏗️ Struktur Proyek & Penjelasan Kelas
+
+Proyek ini dipisahkan menjadi 4 kelas utama yang saling berelasi:
+
+### 1. `Akun.java`
+Bertugas sebagai representasi *rekening bank*.
+- Menyimpan jumlah `saldo` nasabah dengan keamanan tingkat perlindungan (akses *protected*).
+- Memiliki fungsi `setor()` untuk menambah uang dan `tarik()` untuk mengambil uang.
+- Mengembalikan nilai *boolean* (`true`/`false`) untuk memvalidasi sukses atau gagalnya sebuah transaksi.
+
+### 2. `Nasabah.java`
+Merepresentasikan entitas pelanggan (nasabah) di dunia nyata.
+- Menyimpan informasi detail pelanggan seperti `namaDepan` dan `namaBelakang`.
+- Memiliki *Array of Objects* `daftarAkun` yang berperan memberi kapasitas kepemilikan rekening hingga maksimal 5 akun per orang.
+
+### 3. `Bank.java`
+Berperan sebagai pengelola data bank terpusat.
+- Menggunakan *Array of Objects* untuk menampung pendaftaran hingga 100 objek nasabah.
+- Menjadi titik jembatan untuk mencari dan memanggil profil data seorang nasabah menggunakan *index*.
+
+### 4. `Main.java`
+Kelas *Driver* atau pintu masuk utama (*Entry-Point*) berjalannya aplikasi.
+- Mensimulasikan inisialisasi entitas Bank, mendaftarkan nasabah bernama **Wildan Afandika**, lalu mengalokasikan akun dengan saldo awal Rp 500.000.
+- Mengeksekusi blok perulangan *do-while* untuk menyajikan menu interaktif yang senantiasa aktif hingga pengguna memilih opsi untuk keluar.
+
+---
+
+## 🛠️ Library Tambahan
+
+Proyek ini menggunakan _library_ utilitas bawaan standar dari Java, yaitu:
+- **`java.util.Scanner`**: Berfungsi sebagai *listener* atau penangkap ketikan dari pengguna (*user input*). Digunakan secara intensif di kelas `Main.java` untuk membaca angka navigasi pilihan Menu ATM dan menangkap nilai nominal uang yang ingin disetor/ditarik.
+- **`System.getProperty` & `ProcessBuilder`**: (Tambahan Opsional) Dimanfaatkan secara spesifik dalam logika untuk memicu pembersihan layar terminal *(Clear Screen)*, yang mampu mendeteksi secara otomatis *Operating System* milik pengguna (Windows/Linux/Mac).
+
+---
+
+## 🚀 Cara Menjalankan
+
+1. Pastikan Anda telah menginstal **Java Development Kit (JDK)** di perangkat Anda.
+2. Buka terminal/CMD dan arahkan *(cd)* ke direktori proyek ini.
+3. Lakukan kompilasi (*compile*) seluruh file sumber Java ke folder `bin` dengan perintah:
+   ```bash
+   javac -d bin src/*.java
+   ```
+4. Jalankan kelas utama dengan menjalankan perintah:
+   ```bash
+   java -cp bin Main
+   ```
+
+---
+
+## 📸 Screenshot Eksekusi
+
+Berikut adalah cuplikan hasil berjalannya aplikasi di dalam konsol/terminal, menampilkan keberhasilan logika PBO dan validasi transaksi pada menu ATM:
+
+- **Tampilan Awal:**  
+  ![Tampilan Awal](assets/menu_awal.png)
+
+- **Tampilan Cek Saldo:**  
+  ![Tampilan Cek Saldo](assets/cek_saldo.png)
+
+- **Uji Coba Setor Tunai:**  
+  ![Setor Tunai](assets/setor_tunai.png)
+
+- **Uji Coba Tarik Tunai:**  
+  ![Tarik Tunai](assets/tarik_tunai.png)
