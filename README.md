@@ -1,12 +1,19 @@
-# 🏦 Simulasi Sistem Bank & ATM PBO
+# 🏦 Simulasi Sistem Bank (MySawit)
 
 > **Identitas Mahasiswa**
 > - **Nama:** Wildan Afandika
 > - **NIM:** F1D02510141
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![OOP](https://img.shields.io/badge/OOP-Principles-brightgreen?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+<div align="center">
+  <br>
+  <marquee scrollamount="10" direction="left" behavior="alternate">🚀 <b>PEMROGRAMAN BERORIENTASI OBJEK 2026</b> 🚀</marquee>
+  
+  <p>
+    <img src="https://img.shields.io/badge/Bahasa-Java-orange?style=for-the-badge&logo=java" alt="Java" />
+    <img src="https://img.shields.io/badge/Tugas-Array/ArrayList-blue?style=for-the-badge" alt="OOP" />
+    <img src="https://img.shields.io/badge/Status-Selesai-success?style=for-the-badge" alt="Status" />
+  </p>
+</div>
 
 Selamat datang di repositori proyek **Simulasi Sistem Bank & Mesin ATM Sederhana**. Proyek ini disusun sebagai bentuk pemenuhan Tugas Pemrograman Berorientasi Objek (PBO), dengan fokus utama pada **Latihan/Eksplorasi materi Array dan ArrayList** di dalam ekosistem Java. Melalui program ini, kita dapat melihat implementasi nyata bagaimana sebuah koleksi data *(Array/ArrayList)* digunakan untuk mengelola entitas secara dinamis.
 
@@ -14,8 +21,6 @@ Selamat datang di repositori proyek **Simulasi Sistem Bank & Mesin ATM Sederhana
 
 ## 📑 Daftar Isi
 - [Fitur Utama](#-fitur-utama)
-- [Struktur Proyek & Penjelasan Kelas](#-struktur-proyek--penjelasan-kelas)
-- [Library Tambahan](#-library-tambahan)
 - [Cara Menjalankan](#-cara-menjalankan)
 - [Screenshot Eksekusi](#-screenshot-eksekusi)
 
@@ -50,7 +55,7 @@ Berperan sebagai pengelola data bank terpusat.
 - Menjadi titik jembatan untuk mencari dan memanggil profil data seorang nasabah menggunakan *index*.
 
 ### 4. `Main.java`
-Kelas *Driver* atau pintu masuk utama (*Entry-Point*) berjalannya aplikasi.
+Kelas *Driver* atau pintu masuk utama berjalannya aplikasi.
 - Mensimulasikan inisialisasi entitas Bank, mendaftarkan nasabah bernama **Wildan Afandika**, lalu mengalokasikan akun dengan saldo awal Rp 500.000.
 - Mengeksekusi blok perulangan *do-while* untuk menyajikan menu interaktif yang senantiasa aktif hingga pengguna memilih opsi untuk keluar.
 
